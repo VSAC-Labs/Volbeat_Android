@@ -17,6 +17,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -35,12 +36,14 @@ android {
     }
 }
 
+
+val appCenterSdkVersion = "4.4.5"
+
+
 dependencies {
 
-    def appCenterSdkVersion = '4.4.5'
-    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
-    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
-
+    implementation ("com.microsoft.appcenter:appcenter-analytics:$appCenterSdkVersion")
+    implementation ("com.microsoft.appcenter:appcenter-crashes:$appCenterSdkVersion")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
